@@ -1,0 +1,101 @@
+*{
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0px ;
+}
+body{
+    margin-top: 28px;
+    background-color: #157A6E;
+}
+
+.container{
+    margin-top: 50px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head{
+    padding: 28px;
+}
+
+.boxes{
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+    border-radius: 14px;
+    padding: 35px 20px 20px 20px;
+}
+
+.box{
+    width: 18vmin;
+    height: 18vmin;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    border: none;
+    background-color: #C2C5BB;
+    color: black;
+    font-size: 8vmin;
+    font-weight: bold;
+}
+
+.winner{
+    position: relative;
+    top: 45%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.newgame{
+    background-color: black;
+    color: white;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+    margin-top: -21px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+}
+.newgame:hover{
+    background-color: #121212;
+}
+
+.newgame:active{
+    background-color: #1a1a1a;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.reset{
+    background-color: black;
+    color: white;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    font-weight: bold;
+    margin: 7px;
+    cursor: pointer;
+    position: absolute;
+}
+.reset:hover{
+    background-color: #121212;
+}
+
+.reset:active{
+    background-color: #1a1a1a;
+}
