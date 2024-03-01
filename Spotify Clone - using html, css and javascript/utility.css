@@ -1,0 +1,25 @@
+.box{
+    background-color: #121212;
+    border-radius: 7px;
+}
+
+.c-white{
+    filter: invert(1);
+}
+
+.c-grey{
+    color: #b3b3b3;
+}
+
+.c-darkgrey{
+    color: #4d4d4d;
+}
+
+.reset{
+    margin: 0;
+    padding: 0;
+}
+
+.cursor{
+    cursor: pointer;
+}
