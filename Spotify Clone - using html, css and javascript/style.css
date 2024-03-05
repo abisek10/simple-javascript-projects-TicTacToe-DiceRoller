@@ -10,6 +10,7 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+
 .two-boxes {
     display: flex;
     gap: 2px;
@@ -23,7 +24,7 @@ body {
 
 .left-bottom {
     width: calc(25vw - 14px);
-    height: calc(42vh - 14px);
+    height: calc(42vh + 100px - 14px);
     margin: 0px 7px 0px 7px;
     border-radius: 7px 7px 0px 0px;
     background-color: #121212;
@@ -31,8 +32,9 @@ body {
 
 .right {
     width: 75vw;
-    height: calc(100vh - 100px);
-    margin: 7px 7px 7px 0px;
+    /* height: calc(785px - 100px); */
+    margin: 7px 7px 0px 0px;
+    overflow: auto;
 }
 
 .box ul li {
@@ -59,6 +61,7 @@ body {
 
 .left-bottom {
     padding: 0px 7px;
+    overflow: auto;
 }
 
 .library {
@@ -91,60 +94,59 @@ body {
     background-color: #1a1a1a;
 }
 
-/* .inside-box{
-    height: 134px;
-} */
 
-.left-bottom .inside-box {
-    background-color: #242424;
-    padding: 7px 18px;
+.song-list div .song {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 95%;
+    gap: 14px;
     border: 0px solid;
-    border-radius: 7px;
-    height: 130px;
+    border-radius: 4px;
+    margin: 0px 12px 7px 6px;
 }
 
-.inside-box .p1 {
-    font-weight: 500;
+.song-list div .song:hover{
+    cursor: pointer;
+    background-color: #1a1a1a;
 }
 
-.inside-box .p2 {
+.song-list div .song:active{
+    background-color: hsla(0, 0%, 14%, 1);
+}
+
+.song-list .song .img img{
+    padding: 0px 14px;
+}
+
+
+.song-list .song .info{
+    line-height: 21px;
+}
+
+.song-list .song .info :first-child{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 7px 0px 0px 0px;
+}
+
+.song-list .song .info :last-child{
     font-weight: 400;
     font-size: 14px;
+    margin: 0px 0px 7px 0px;
 }
 
-.inside-box .button button {
-    margin: 12px 0px 6px 0px;
-    background-color: white;
-    font-weight: bold;
-    font-family: "Roboto", sans-serif;
-    font-size: 14px;
-    border: none;
-    padding: 7px 14px;
-    border-radius: 16px;
-    text-align: center;
-    cursor: pointer;
-    position: fixed;
-}
-
-.inside-box .button button:hover {
-    transform: scale(1.05);
-    font-weight: bolder;
-}
-
-.inside-box .button button:active {
-    transform: scale(1);
-    font-weight: bolder;
-    background-color: #a7a7a7;
-}
 
 .left-bottom-bottom {
     margin: 0px 7px;
-    height: 205px; /* 293px */
+    height: 111px; /* 293px */
     width: 25vw;
     border-radius: 0px 0px 7px 7px;
     background-color: #121212;
     position: relative;
     z-index: 10;
+    display: flex;
+    align-items: end;
 }
 
 .left-bottom-bottom .list ul {
@@ -248,28 +250,28 @@ body {
     background-color: #a7a7a7;
 }
 
-.inside-box .h2 h2 {
+.playlist .inside-box .h2 h2 {
     margin: 5px;
     cursor: pointer;
 }
 
-.inside-box .h2 h2:hover {
+.playlist .inside-box .h2 h2:hover {
     text-decoration: underline;
 }
 
-.inside-box {
+.playlist .inside-box {
     background-color: #1a1a1a;
     height: 200px;
 }
 
-.inside-box .top .show-all {
+.playlist .inside-box .top .show-all {
     color: #a7a7a7;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
 }
 
-.inside-box .top .show-all:hover {
+.playlist .inside-box .top .show-all:hover {
     text-decoration: underline;
 }
 
@@ -310,7 +312,7 @@ body {
 }
 
 .player{
-    margin: 0px 7px;
+    margin: 7px;
     width: calc(100% - 25% - 14px);
     height: 72px;
     padding-left: calc(25% + 7px);
@@ -320,24 +322,55 @@ body {
 }
 
 .play{
+    padding-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.play .part-1{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
-    width: 100%;
 }
 
-.play img{
+.play .part-1 img{
     width: 16px;
 }
 
-.play .remuse button{
+.play .part-1 .remuse button{
     background-color: hsla(0, 0%, 30%, 1);
     border-radius: 50%;
     padding: 10px;
     border: none;
     display: flex;
     align-items: center;
+}
+
+.play .part-2{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+}
+
+.play .part-2 .duration :first-child,
+:last-child{
+    font-size: 12px;
+    color: #a7a7a7;
+    font-weight: 400;
+}
+
+
+.play .part-2 .duration{
+    height: 4px;
+    border-radius: 10px;
+    background-color: #4d4d4d;
+    width: 100%;
+    margin: 14px 0px;
 }
 
 .settings{
